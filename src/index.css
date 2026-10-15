@@ -4,6 +4,28 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body,
+#app {
+  width: 100%;
+  min-height: 100%;
+}
+
+html,
+body {
+  overflow-x: clip;
+}
+
+body {
+  overflow-wrap: anywhere;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
 :root {
   color-scheme: light;
   --color-warm-ivory: 248 245 236;
@@ -123,7 +145,7 @@ html[data-theme='night'] .text-green-600 {
 .floating-action-button {
   position: fixed;
   z-index: 49;
-  right: 24px;
+  right: calc(24px + env(safe-area-inset-right));
   width: 64px;
   height: 64px;
   border-radius: 9999px;
@@ -263,7 +285,7 @@ html[data-theme='night'] .text-green-600 {
   }
 
   .floating-action-button {
-    right: 16px;
+    right: calc(16px + env(safe-area-inset-right));
     width: 56px;
     height: 56px;
   }
@@ -284,6 +306,35 @@ html[data-theme='night'] .text-green-600 {
 
   .hero-top-button {
     bottom: calc(160px + env(safe-area-inset-bottom));
+  }
+}
+
+@media (max-width: 359px) {
+  .hero-slider-content {
+    left: 18px;
+    right: 18px;
+  }
+
+  .hero-slider-arrow-previous {
+    left: 12px;
+  }
+
+  .hero-slider-arrow-next {
+    right: 12px;
+  }
+
+  .floating-action-button {
+    right: calc(12px + env(safe-area-inset-right));
+    width: 52px;
+    height: 52px;
+  }
+
+  .hero-call-button {
+    bottom: calc(88px + env(safe-area-inset-bottom));
+  }
+
+  .hero-top-button {
+    bottom: calc(152px + env(safe-area-inset-bottom));
   }
 }
 

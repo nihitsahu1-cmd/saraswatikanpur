@@ -73,7 +73,7 @@ const TopStrip = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            className="hidden sm:flex items-center gap-2 text-xs sm:text-sm"
+            className="hidden md:flex items-center gap-2 text-xs sm:text-sm"
           >
             <motion.div
               className="relative"

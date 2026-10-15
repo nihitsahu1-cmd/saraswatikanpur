@@ -95,7 +95,7 @@ const Navbar = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <Link to="/" className="flex items-center gap-2 sm:gap-4 min-w-0 flex-shrink-0 w-auto xl:w-[280px]">
+              <Link to="/" className="flex items-center gap-2 sm:gap-4 min-w-0 flex-1 xl:flex-none xl:w-[280px]">
                 <motion.img
                   src={schoolLogo}
                   alt="Saraswati Vidya Niketan Logo"
@@ -103,11 +103,11 @@ const Navbar = () => {
                   whileHover={{ rotate: 5, scale: 1.05 }}
                   transition={{ duration: 0.3 }}
                 />
-                <div className="flex flex-col">
-                  <h1 className="text-deepNavy font-extrabold text-[14px] sm:text-[22px] leading-tight" style={{ fontFamily: 'Georgia, serif' }}>
+                <div className="flex min-w-0 flex-col">
+                  <h1 className="text-deepNavy font-extrabold text-[clamp(12px,3.5vw,22px)] leading-tight" style={{ fontFamily: 'Georgia, serif' }}>
                     Saraswati Vidya Niketan
                   </h1>
-                  <h2 className="text-deepNavy font-bold text-[12px] sm:text-[15px] leading-tight" style={{ fontFamily: 'Georgia, serif' }}>
+                  <h2 className="text-deepNavy font-bold text-[clamp(11px,2.4vw,15px)] leading-tight" style={{ fontFamily: 'Georgia, serif' }}>
                     Inter College
                   </h2>
                 </div>
